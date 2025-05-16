@@ -1,0 +1,92 @@
+.hari-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgba(0, 0, 0, 0.3); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  border-color: #1e293b;
+}
+
+.hari-modal-content {
+  background: #fff;
+  padding: 50px 60px;
+  border-radius: 12px;
+  width: 200px;           /* reduced width */
+  max-width: 150vw;        /* responsive for smaller screens */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  left: 0;                /* ensure no left offset */
+  transform: none; 
+  margin-right: 90rem;  
+  margin-bottom: 10rem;     /* remove any transform */
+}
+
+.hari-title {
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.hari-input-field {
+  width: 100%;
+  padding: 10px 12px;     /* slightly smaller padding */
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1.5px solid #cbd5e1;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.hari-input-field:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.5);
+}
+
+.hari-button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.hari-btn-cancel {
+  padding: 8px 22px;
+  border-radius: 8px;
+  border: none;
+  background-color: #e2e8f0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hari-btn-cancel:hover {
+  background-color: #cbd5e1;
+}
+
+.hari-btn-save {
+  padding: 8px 22px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.5);
+  transition: background-color 0.3s ease;
+}
+
+.hari-btn-save:hover {
+  background-color: #1d4ed8;
+}
+/* Prevent body scroll when modal is open */
+.hari-modal-open {
+  overflow: hidden;
+  height: 100vh;
+}

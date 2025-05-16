@@ -1,0 +1,199 @@
+.topic-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to right, #f8fafc, #e2e8f0);
+  color: #1f2937;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.topic-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #2563eb;
+  animation: slideDown 1s ease;
+}
+
+.topic-form {
+  display: grid;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.topic-input {
+  padding: 0.75rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.topic-input:focus {
+  border-color: #2563eb;
+  outline: none;
+  transform: scale(1.02);
+}
+
+.course-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.course-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.add-course-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background 0.3s ease;
+}
+
+.add-course-btn:hover {
+  background: #2563eb;
+}
+
+.no-courses {
+  color: #64748b;
+  font-style: italic;
+}
+
+.course-table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.course-table th, .course-table td {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.course-table th {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.course-table tr:hover {
+  background-color: #f0f9ff;
+}
+
+.save-btn {
+  margin-top: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.75rem 2rem;
+  background: #16a34a;
+  color: white;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.save-btn:hover {
+  background: #15803d;
+}
+
+.modal-container {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.modal-panel {
+  background: #f8fafc;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  max-width: 500px;
+  animation: zoomIn 0.4s ease-in-out;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.cancel-btn {
+  background: #e5e7eb;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+
+.add-btn {
+  background: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.edit-btn, .delete-btn {
+  margin: 0 5px;
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}

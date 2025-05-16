@@ -1,0 +1,89 @@
+/* Dashboard.css */
+
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.dashboard-card {
+  background-color: #0f172a;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  padding: 2rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  outline: none;
+}
+
+.dashboard-card:focus,
+.dashboard-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.7); /* blue shadow */
+  background-color: #1e293b;
+}
+
+.icon-wrapper {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #3b82f6; /* Tailwind Blue-500 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: white;
+  user-select: none;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 640px) {
+  .dashboard-title {
+    font-size: 2.5rem;
+  }
+
+  .dashboard-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .icon-wrapper {
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+  }
+}

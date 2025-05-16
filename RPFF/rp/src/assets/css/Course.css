@@ -1,0 +1,151 @@
+.course-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+  padding: 2rem;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.course-card {
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease;
+}
+
+.course-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #4a148c;
+  animation: popIn 0.6s ease-in-out;
+}
+
+.course-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.course-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.course-form input,
+.course-form select {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.course-form input:focus,
+.course-form select:focus {
+  outline: none;
+  border-color: #7b1fa2;
+  transform: scale(1.02);
+}
+
+.course-button-wrapper {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.course-button-wrapper button {
+  background-color: #7b1fa2;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.course-button-wrapper button:hover {
+  background-color: #6a1b9a;
+  transform: translateY(-2px);
+}
+
+.course-table-wrapper {
+  overflow-x: auto;
+}
+
+.course-table-wrapper h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  animation: slideUp 0.5s ease;
+}
+
+.course-table th,
+.course-table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.course-table th {
+  background-color: #f3e5f5;
+  color: #4a148c;
+}
+
+.course-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.no-data {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  padding: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
